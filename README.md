@@ -7,3 +7,11 @@ A template to bootstrap scala web applications.
 * Maven
 * Jetty
 * Spring MVC
+
+Usage
+-----
+
+´´´
+mvn scala:compile
+mvn jetty:run
+´´´
