@@ -11,6 +11,6 @@
   	<div class="well">
     	<h1>Hello from Scala & Spring</h1>
     </div>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
   </body>
 </html>
