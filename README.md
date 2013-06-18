@@ -11,5 +11,4 @@ A template to bootstrap scala web applications.
 Usage
 -----
 
-1. mvn scala:compile
-2. mvn jetty:run
+mvn jetty:run
