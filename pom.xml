@@ -54,8 +54,6 @@
   </dependencies>
   <build>
     <finalName>mvcplayground</finalName>
-    <sourceDirectory>src/main/scala</sourceDirectory>
-    <testSourceDirectory>src/test/scala</testSourceDirectory>
 
     <plugins>
         <!-- The jetty plugin -->
@@ -77,6 +75,22 @@
             <configuration>
                 <scalaVersion>2.10.2</scalaVersion>
             </configuration>
+            <executions>
+                <execution>
+                    <id>compile</id>
+                    <goals>
+                        <goal>compile</goal>
+                    </goals>
+                    <phase>compile</phase>
+                </execution>
+                <execution>
+                    <id>test-compile</id>
+                    <goals>
+                        <goal>testCompile</goal>
+                    </goals>
+                    <phase>test-compile</phase>
+                </execution>
+            </executions>
         </plugin>
     </plugins>
   </build>
