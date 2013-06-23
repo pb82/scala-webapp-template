@@ -16,5 +16,5 @@ import org.springframework.security.access.prepost.PreAuthorize
 class HomeController {
   @PreAuthorize("isFullyAuthenticated()")
   @RequestMapping(Array("/"))
-  def home(): String = "index"
+  def home() = "index"
 }
