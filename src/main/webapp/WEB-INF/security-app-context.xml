@@ -12,7 +12,7 @@
 
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="userService">
-            <security:password-encoder hash="sha-256" />
+            <security:password-encoder hash="sha-256" base64="true"/>
         </security:authentication-provider>
     </security:authentication-manager>
 

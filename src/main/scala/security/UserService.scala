@@ -5,6 +5,8 @@ import java.util
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import collection.JavaConversions._
+import java.security.MessageDigest
+import sun.misc.BASE64Encoder
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,12 +20,9 @@ class UserService extends UserDetailsService {
     new UserDetails {
       def isEnabled: Boolean = true
       def getPassword: String = {
-        val md = java.security.MessageDigest.getInstance("SHA-256")
-        val buffer = new StringBuffer()
-        md.digest("gabba".getBytes) map(
-          (f: Byte) => buffer.append(Integer.toString((f & 0xff) + 0x100, 16).substring(1))
-        )
-        buffer.toString
+        val md = MessageDigest.getInstance("SHA-256")
+        val bytes = md.digest("fluffy".toString.getBytes)
+        new BASE64Encoder().encode(bytes)
       }
       def isAccountNonExpired: Boolean = true
       def isCredentialsNonExpired: Boolean = true
