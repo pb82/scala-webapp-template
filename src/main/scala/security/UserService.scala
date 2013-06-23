@@ -19,11 +19,7 @@ class UserService extends UserDetailsService {
   def loadUserByUsername(userName: String): UserDetails = {
     new UserDetails {
       def isEnabled: Boolean = true
-      def getPassword: String = {
-        val md = MessageDigest.getInstance("SHA-256")
-        val bytes = md.digest("fluffy".toString.getBytes)
-        new BASE64Encoder().encode(bytes)
-      }
+      def getPassword: String = CustomDigest("fluffy")
       def isAccountNonExpired: Boolean = true
       def isCredentialsNonExpired: Boolean = true
       def getAuthorities: util.Collection[_ <: GrantedAuthority] = {
