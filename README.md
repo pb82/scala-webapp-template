@@ -7,6 +7,7 @@ A template to bootstrap scala web applications.
 * Maven
 * Jetty
 * Spring MVC
+* Spring Security
 * Twitter Bootstrap
 
 Usage
