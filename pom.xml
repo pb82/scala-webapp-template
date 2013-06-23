@@ -70,6 +70,13 @@
           <version>${spring.security.version}</version>
       </dependency>
 
+      <!-- Slick DB Access -->
+      <dependency>
+          <groupId>com.typesafe.slick</groupId>
+          <artifactId>slick_2.10</artifactId>
+          <version>1.0.1</version>
+      </dependency>
+
   </dependencies>
   <build>
     <finalName>mvcplayground</finalName>
