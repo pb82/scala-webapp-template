@@ -8,6 +8,7 @@ A template to bootstrap scala web applications.
 * Jetty
 * Spring MVC
 * Spring Security
+* log4j2 + ScalaLogging
 * Slick for DB Access
 * Twitter Bootstrap
 
