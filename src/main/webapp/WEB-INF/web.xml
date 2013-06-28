@@ -5,6 +5,11 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!-- Application Startup & Shutdown -->
+    <listener>
+        <listener-class>init.ApplicationStartup</listener-class>
+    </listener>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>

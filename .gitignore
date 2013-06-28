@@ -2,5 +2,6 @@
 *.iml
 *.war
 *.jar
+*.db
 target/
 logs/*
