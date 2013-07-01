@@ -19,7 +19,6 @@ class HomeController {
   @PersistenceContext
   private val em: EntityManager = null
 
-  @Transactional
   @PreAuthorize("isFullyAuthenticated()")
   @RequestMapping(Array("/"))
   def home() = "index"
